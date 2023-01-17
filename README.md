@@ -1,5 +1,5 @@
 # receipt_processor
-This web service calculates the number of points that should be rewarded for a receipt according to
+This web service calculates the number of points that should be awarded for a receipt according to
 the following rules:
 * One point for every alphanumeric character in the retailer name.
 * 50 points if the total is a round dollar amount with no cents.
@@ -31,13 +31,13 @@ To run the web service locally, please install *docker* and *golang*.
    POST and GET HTTP methods through the Postman application. The examples of JSON Payloads could be found
    in the receipt_processor/examples folder.
    ```
-   POST HTTP methods + http://localhost:8080/receipts/process + raw JSON data-> JSON id data:
+   POST HTTP method + http://localhost:8080/receipts/process + raw JSON data -> JSON id data:
    {"id" : "9fb03564-47a5-4ca6-b14d-6dddbbe26b1b"}
    ```
    
    ```
-   GET request + http://localhost:8080/receipts/9fb03564-47a5-4ca6-b14d-6dddbbe26b1b/points
-   + raw JSON data-> JSON *points* data:
+   GET HTTP method + http://localhost:8080/receipts/9fb03564-47a5-4ca6-b14d-6dddbbe26b1b/points
+   + raw JSON data -> JSON *points* data:
      { "points" : 109 }
    ```
    
